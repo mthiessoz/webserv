@@ -1,0 +1,64 @@
+{
+	"servers": [
+		{
+			"host": "localhost",
+			"port": 8080,
+			"server_names": [],
+			"max_client_body_size": 0,
+			"default_error_pages": [
+			],
+			"routes": [
+				{
+					"location": "/",
+					"methods": [
+						"GET",
+						"POST",
+						"DELETE"
+					],
+					"http_redir": "",
+					"root": "www/",
+					"dir_listing": true,
+					"index": ""
+				}
+			]
+		},
+		{
+			"host": "localhost",
+			"port": 8181,
+			"server_names": [],
+			"max_client_body_size": 1000000,
+			"default_error_pages": [
+				[
+					404,
+					"www/error.html"
+				]
+			],
+			"routes": [
+				{
+					"location": "/upload",
+					"methods": [
+						"GET",
+						"POST",
+						"DELETE"
+					],
+					"http_redir": "",
+					"root": "www/",
+					"dir_listing": true,
+					"index": ""
+				},
+				{
+					"location": "/",
+					"methods": [
+						"GET",
+						"POST",
+						"DELETE"
+					],
+					"http_redir": "",
+					"root": "www/",
+					"dir_listing": true,
+					"index": "42lwatch.html"
+				}
+			]
+		}
+	]
+}
